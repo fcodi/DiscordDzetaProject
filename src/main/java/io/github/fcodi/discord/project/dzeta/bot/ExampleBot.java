@@ -12,7 +12,13 @@ import java.util.Arrays;
 public class ExampleBot {
 
 	public static void main(String[] args) {
-		GatewayDiscordClient client = DiscordClientBuilder.create(System.getenv("DiscordBotToken"))
+		final boolean TOKEN_FROM_SYSTEM_PROPERTY =
+				Boolean.parseBoolean(System.getProperty("TEST"));
+		final String TOKEN = TOKEN_FROM_SYSTEM_PROPERTY
+				? System.getProperty("DISCORD_BOT_TOKEN")
+				: System.getenv("DISCORD_BOT_TOKEN");
+		System.out.println(TOKEN);
+		GatewayDiscordClient client = DiscordClientBuilder.create(TOKEN)
 				.build()
 				.login()
 				.block();
@@ -20,7 +26,9 @@ public class ExampleBot {
 		client.getEventDispatcher().on(ReadyEvent.class)
 				.subscribe(event -> {
 					User self = event.getSelf();
-					System.out.printf("Logged in as %s#%s%n", self.getUsername(), self.getDiscriminator());
+					System.out.printf("Logged in as %s#%s%nТокен получен из %s",
+							self.getUsername(), self.getDiscriminator(),
+							TOKEN_FROM_SYSTEM_PROPERTY ? "SystemProperty" : "Environment");
 				});
 
 		client.getEventDispatcher().on(MessageCreateEvent.class)
