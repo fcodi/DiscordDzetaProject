@@ -11,7 +11,6 @@ public class ExampleBot {
 
 	public static void main(String[] args) {
 		GatewayDiscordClient client = DiscordClientBuilder.create(System.getenv("DiscordBotToken"))
-				// "Nzk2NDE1OTA1NzEwMDgwMDAw.X_XmHA.IEMmvDpFhoWPKj8qNCojXi8S-T0")
 				.build()
 				.login()
 				.block();
