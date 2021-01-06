@@ -48,7 +48,7 @@
                 <version>3.0.3</version>
                 <configuration>
                     <processTypes>
-                        <worker>java -jar target/${artifactId}-${version}.jar</worker>
+                        <worker>java -jar target/${project.artifactId}-${project.version}.jar</worker>
                     </processTypes>
                 </configuration>
             </plugin>
