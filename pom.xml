@@ -54,8 +54,8 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>ExampleBot</mainClass>
-                            <name>Example Bot</name>
+                            <mainClass>${examplebot.class}</mainClass>
+                            <name>ExampleBot</name>
                         </program>
                     </programs>
                 </configuration>
