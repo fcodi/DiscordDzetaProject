@@ -1,1 +1,1 @@
-release: java -jar target/discord-dzeta-bot-1.0-SNAPSHOT.jar
+worker: java -jar target/discord-dzeta-bot-1.0-SNAPSHOT.jar
