@@ -17,7 +17,6 @@ public class ExampleBot {
 		final String TOKEN = TOKEN_FROM_SYSTEM_PROPERTY
 				? System.getProperty("DISCORD_BOT_TOKEN")
 				: System.getenv("DISCORD_BOT_TOKEN");
-		System.out.println(TOKEN);
 		GatewayDiscordClient client = DiscordClientBuilder.create(TOKEN)
 				.build()
 				.login()
