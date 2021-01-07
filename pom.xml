@@ -42,7 +42,7 @@
                     </execution>
                 </executions>
             </plugin>-->
-            <plugin>
+<!--            <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <artifactId>heroku-maven-plugin</artifactId>
                 <version>3.0.3</version>
@@ -50,10 +50,10 @@
                     <appName>${heroku.appName}</appName>
                     <processTypes>
                         <worker>java -jar target/${project.artifactId}-${project.version}.jar</worker>
-                        <!--worker>java -jar $JAVA_OPTS -cp target/classes:target/dependency/* ExampleBot</worker>-->
+                        &lt;!&ndash;worker>java -jar $JAVA_OPTS -cp target/classes:target/dependency/* ExampleBot</worker>&ndash;&gt;
                     </processTypes>
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </build>
 
