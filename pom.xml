@@ -19,89 +19,48 @@
         <maven.compiler.target>15</maven.compiler.target>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter-bintray</name>
+            <url>https://jcenter.bintray.com/</url>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
-                <!-- Build an executable JAR -->
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
+                <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <archive>
-                        <!--<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>-->
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>ExampleBot</mainClass>
-                        </manifest>
-                    </archive>
+                    <source>15</source>
+                    <target>15</target>
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-5</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>ExampleBot</mainClass>
+                            <mainClass>io.github.fcodi.discord.ExampleBot</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
-<!--            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.8</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>
-                                ${project.build.directory}/dependency-jars/
-                            </outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>-->
-<!--            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>appassembler-maven-plugin</artifactId>
-                <version>1.1.1</version>
-                <configuration>
-                    <assembleDirectory>target</assembleDirectory>
-                    <programs>
-                        <program>
-                            <mainClass>ExampleBot</mainClass>
-                            <name>workerBot</name>
-                        </program>
-                    </programs>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>assemble</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>-->
-<!--            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.3</version>
-                <configuration>
-                    <appName>${heroku.appName}</appName>
-                    <processTypes>
-                        <worker>java -jar target/${project.artifactId}-${project.version}.jar</worker>
-                        &lt;!&ndash;worker>java -jar $JAVA_OPTS -cp target/classes:target/dependency/* ExampleBot</worker>&ndash;&gt;
-                    </processTypes>
-                </configuration>
-            </plugin>-->
         </plugins>
     </build>
 

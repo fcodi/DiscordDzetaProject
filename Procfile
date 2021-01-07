@@ -1,1 +1,1 @@
-worker: java -jar target/discord-dzeta-bot-1.0-SNAPSHOT.jar
+worker: java src/main/java/io/github/fcodi/discord/ExampleBot.java
