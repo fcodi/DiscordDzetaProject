@@ -1,4 +1,4 @@
-package io.github.fcodi.discord.project.dzeta.bot;
+package io.github.fcodi.discord;
 
 import discord4j.core.DiscordClientBuilder;
 import discord4j.core.GatewayDiscordClient;
