@@ -9,7 +9,7 @@
     <!-- <url>http://www.powermock.org</url> -->
 
     <groupId>io.github.fcodi</groupId>
-    <artifactId>discord-dzeta-bot</artifactId>
+    <artifactId>discord-dzeta-project</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
