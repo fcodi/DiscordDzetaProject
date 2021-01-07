@@ -1,0 +1,1 @@
+worker: java -jar $JAVA_OPTS -cp target/classes:target/dependency/* ExampleBot
