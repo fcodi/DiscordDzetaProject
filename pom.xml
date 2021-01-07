@@ -29,8 +29,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-<!--                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>-->
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>dependency-jars/</classpathPrefix>
                             <mainClass>io.github.fcodi.discord.ExampleBot</mainClass>
                         </manifest>
                     </archive>
