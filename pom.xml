@@ -49,7 +49,8 @@
                 <configuration>
                     <appName>${heroku.appName}</appName>
                     <processTypes>
-                        <worker>java -jar $JAVA_OPTS -cp target/classes:target/dependency/* ExampleBot</worker>
+                        <worker>java -jar target/${project.artifactId}-${project.version}.jar</worker>
+                        <!--worker>java -jar $JAVA_OPTS -cp target/classes:target/dependency/* ExampleBot</worker>-->
                     </processTypes>
                 </configuration>
             </plugin>
