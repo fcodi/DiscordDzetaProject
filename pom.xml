@@ -31,7 +31,7 @@
                         <!--<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>-->
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>io.github.fcodi.discord.ExampleBot</mainClass>
+                            <mainClass>ExampleBot</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -44,7 +44,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>io.github.fcodi.discord.ExampleBot</mainClass>
+                            <mainClass>ExampleBot</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

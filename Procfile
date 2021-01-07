@@ -1,1 +1,1 @@
-worker: java -cp target/classes/:target/dependency/* io.github.fcodi.discord.ExampleBot
+worker: java -cp target/classes/:target/dependency/* ExampleBot
