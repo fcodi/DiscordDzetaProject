@@ -1,1 +1,1 @@
-worker: java src/main/java/io/github/fcodi/discord/ExampleBot.java
+worker: java -cp target/classes/:target/dependency/* io.github.fcodi.discord.ExampleBot
