@@ -13,12 +13,12 @@ public class ExampleBot {
 
 	public static void main(String[] args) {
 		System.out.printf("PROPERTY %s%nENV %s%n",
-				System.getProperty("DISCORD_BOT_TOKEN"), System.getenv("DISCORD_BOT_TOKEN"));
+				System.getProperty("token"), System.getenv("token"));
 		final boolean TOKEN_FROM_SYSTEM_PROPERTY =
 				Boolean.parseBoolean(System.getProperty("TEST"));
 		final String TOKEN = TOKEN_FROM_SYSTEM_PROPERTY
-				? System.getProperty("DISCORD_BOT_TOKEN")
-				: System.getenv("DISCORD_BOT_TOKEN");
+				? System.getProperty("token")
+				: System.getenv("token");
 		GatewayDiscordClient client = DiscordClientBuilder.create(TOKEN)
 				.build()
 				.login()
