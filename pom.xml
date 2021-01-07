@@ -28,8 +28,8 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
+<!--                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>-->
                             <mainClass>io.github.fcodi.discord.project.dzeta.bot.ExampleBot</mainClass>
                         </manifest>
                     </archive>
